@@ -16,6 +16,9 @@ return new class extends Migration
             // This Columns represents the field where the data for Cables and Peripherals is being held
 
             $table->increments('id');
+
+            // Foreign Key of Cables & Peripherals CPID to id of Devices
+
             $table->integer('CPID')->unsigned();
             $table->foreign('CPID')->references('id')->on('devices');
             $table->string('CPName', 255);
