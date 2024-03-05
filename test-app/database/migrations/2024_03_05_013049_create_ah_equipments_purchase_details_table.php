@@ -16,6 +16,7 @@ return new class extends Migration
             // This Columns represents the field where the data of Allied Health Equipment Purchase Details is being held
 
             $table->increments('id');
+            $table->foreign('id')->references('id')->on('ah_equipments');
             $table->integer('EqpID');
             $table->string('EqpDateOfPurch', 255)->nullable();
             $table->integer('EqpPrice')->nullable();

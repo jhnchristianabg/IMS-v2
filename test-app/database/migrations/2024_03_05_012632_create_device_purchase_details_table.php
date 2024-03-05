@@ -16,6 +16,7 @@ return new class extends Migration
             // This Columns represents the field where the data of Device Purchase Details is being held
 
             $table->increments('id');
+            $table->foreign('id')->references('id')->on('devices');
             $table->integer('DeviceID');
             $table->integer('DevicePriceprunit')->nullable();
             $table->string('DeviceSupplier', 255)->nullable();

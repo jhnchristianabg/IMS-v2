@@ -16,6 +16,7 @@ return new class extends Migration
             // This Columns represents the field where the data for Cables and Peripherals Purchase Details is being held
 
             $table->increments('id');
+            $table->foreign('id')->references('id')->on('cablesandperipherals');
             $table->integer('CPID');
             $table->integer('CPPriceprunit')->nullable();
             $table->string('CPSupplier', 255)->nullable();

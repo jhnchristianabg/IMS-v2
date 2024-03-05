@@ -16,6 +16,7 @@ return new class extends Migration
             // This Columns represents the field where the data for ITS Consumable Purchase Details is being held
 
             $table->increments('id');
+            $table->foreign('id')->references('id')->on('its_consumables');
             $table->integer('its_ConsumID');
             $table->integer('its_ConsumPriceprunit')->nullable();
             $table->string('its_ConsumSupplier', 255)->nullable();

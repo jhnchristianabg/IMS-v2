@@ -16,6 +16,7 @@ return new class extends Migration
             // This Columns represents the field where the data of Device Specification is being held
 
             $table->increments('id');
+            $table->foreign('id')->references('id')->on('devices');
             $table->integer('DeviceID');
             $table->string('DeviceOperatingSys', 255)->nullable();
             $table->string('DeviceProductKey', 255)->nullable();
