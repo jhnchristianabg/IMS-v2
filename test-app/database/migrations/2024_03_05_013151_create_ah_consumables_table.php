@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('ah_consumables', function (Blueprint $table) {
 
-            // This Columns represents the field where the data of Allied Health Consumables is being held
+            // This Columns represents the field where the data of Allied Health Consumables is being held!!
 
             $table->increments('id');
             $table->integer('ah_ConsumID');
